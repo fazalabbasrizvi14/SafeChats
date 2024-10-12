@@ -52,7 +52,7 @@ socket.on('login', ({ username, password }) => {
                 message
             });
         }
-    
+        //nice
         // Maintain chat history for both users
         if (!chatHistory[socket.username]) {
             chatHistory[socket.username] = [];
