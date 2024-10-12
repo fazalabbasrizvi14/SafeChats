@@ -80,6 +80,7 @@ socket.on('getUserList', () => {
     });
 });
 
-server.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
+const PORT = process.env.PORT || 3000; // Use the PORT from the environment or fallback to 3000
+server.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
