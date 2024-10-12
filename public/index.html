@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeChats</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <!-- Modal for Login/Register -->
+    <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="auth-title">Login</h2>
+            <input type="text" id="auth-username" placeholder="Enter username">
+            <input type="password" id="auth-password" placeholder="Enter password">
+            <button id="auth-submit">Login</button>
+            <p id="toggle-auth">Don't have an account? Register here.</p>
+        </div>
+    </div>
+
+    <!-- Chat Container -->
+    <div class="chat-container" style="display: none;">
+        <div class="user-list">
+            <div class="sidebar-header">
+                <h2>Safe Chats</h2>
+                <div class="sidebar-nav">
+                    <p id="settings">Settings</p>
+                    <p id="logout">Logout</p>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="user-search" placeholder="Search new users">
+            </div>
+            <ul id="user-list"></ul>
+        </div>
+
+        <!-- Chat window and input -->
+        <div class="chat-window">
+            <div id="chat-header">
+                <h3 id="chat-user">Select a user to chat</h3>
+            </div>
+            <div class="chat-box"></div>
+            <div class="chat-input" style="display: none;">
+                <input type="text" id="message" placeholder="Type your message">
+                <button id="send-message">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!--
+npm init -y
+npm install express socket.io bcryptjs lowdb
+node server.js
+http://localhost:3000
+ -->
+
